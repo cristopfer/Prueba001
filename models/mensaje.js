@@ -16,8 +16,6 @@ function IngresarMensaje(idUsuario,idProfesor, mensaje, tipo, respuesta){
 
 function ConsultarMensajeProfesor(idUsuario,idProfesor,respuesta){ 
     pool.connect(function(err, client, done) { 
-        console.log(idProfesor);
-        console.log(idUsuario); 
         client.query("SELECT * FROM consultar_mensaje_profesor($1,$2)", [idProfesor,idUsuario], function(err,data) {
             done(); 
             if(err){
