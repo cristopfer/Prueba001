@@ -1,5 +1,5 @@
-//var Pool = require('pg-pool');
-var poolPromise  = require('pg-pool').poolPromise;
+var Pool = require('pg-pool');
+//var poolPromise  = require('pg-pool').poolPromise;
 /*var config = {
     user: 'postgres',
     database: 'Proyecto-SCSE',
@@ -14,7 +14,7 @@ var config = {
     host: 'dpg-cibnjjh5rnuk9q9sfqdg-a.oregon-postgres.render.com',
     port: 5432
 };
-var pool = new poolPromise(config);
+var pool = new Pool(config);
 //const pool = await poolPromise;
 
 module.exports.pool = pool;
