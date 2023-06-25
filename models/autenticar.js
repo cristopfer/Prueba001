@@ -5,22 +5,8 @@ function Autenticar(requerimiento, respuesta, direccion, path){
 }
 
 function IngresarSistemaUsuario(usuario, respuesta){
-	pool.connect(function(err, client, done){
-		if(err) {
-            console.log(err)
-        }
-		else{
-			client.query("SELECT * FROM ingresar_sistema($1,$2)", [usuario.username,usuario.password],function(err,data) {        
-				done();				
-				if(err){ 	 
-					LogModel.ErrorLog("models/autenticar", "ingresar_sistema", err.message);                
-				}  
-				else{ 		
-					respuesta.send(JSON.stringify({ estado: data.rows[0].ingresar_sistema })); 
-				}   
-			});
-		}
-		/*client.query("SELECT * FROM ingresar_sistema($1,$2)", [usuario.username,usuario.password],function(err,data) {        
+	pool.connect(function(err, client, done){		
+		client.query("SELECT * FROM ingresar_sistema($1,$2)", [usuario.username,usuario.password],function(err,data) {        
         	done();				
 			if(err){ 	 
         		LogModel.ErrorLog("models/autenticar", "ingresar_sistema", err.message);                
@@ -28,7 +14,7 @@ function IngresarSistemaUsuario(usuario, respuesta){
         	else{ 		
             	respuesta.send(JSON.stringify({ estado: data.rows[0].ingresar_sistema })); 
         	}   
-    	});*/
+    	});
 	});    
 }
 
