@@ -18,7 +18,8 @@ global.idusu = '-';
 global.idproLogueado = '-';
 
 var app = express();
-var port = process.env.PORT || 8080;
+//var port = process.env.PORT || 8080;
+var port = process.env.PORT || 10000;
 var host = process.env.IP || '0.0.0.0';
 var srcpath = path.join(__dirname,'/views');
 
