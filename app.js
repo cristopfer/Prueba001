@@ -19,11 +19,11 @@ global.idproLogueado = '-';
 
 var app = express();
 var port = process.env.PORT || 8080;
-//var port = process.env.PORT || 10000;
 var host = process.env.IP || '0.0.0.0';
 var srcpath = path.join(__dirname,'/views');
 
-app.use(express.static('views'));
+//app.use(express.static('views'));
+app.use(express.static(__dirname+'/views'));
 app.use(session({secret:'XASDASDA', resave: true, saveUninitialized: true}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
