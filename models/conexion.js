@@ -14,7 +14,7 @@ var config = {
     host: 'dpg-cibnjjh5rnuk9q9sfqdg-a.oregon-postgres.render.com',
     port: 5432
 };
-//var pool = new Pool(config);
-const pool = await poolPromise;
+var pool = new poolPromise(config);
+//const pool = await poolPromise;
 
 module.exports.pool = pool;
