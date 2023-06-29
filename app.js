@@ -95,7 +95,7 @@ app.post("/verMensajesPrivados",function(req,res){
     MensajeModel.ConsultarMensajePrivado(idproLogueado,res);
 });
 app.post("/mensajePrivado",function(req,res){ 
-    MensajeModel.IngresarMensaje(idusu,idpro,req.body.mensaje,req.body.tipo,res);
+    MensajeModel.IngresarMensaje(req.body.idusu,idproLogueado,req.body.mensaje,req.body.tipo,res);
 });
 
 app.listen(port, host ,function(){   

@@ -168,12 +168,12 @@
                                         $("#enviarMensaje").show();
                                         var currentRow=$(this).closest("div.row");
                                         var col1=currentRow.find("div:eq(4)").html();
-                                        alert(col1);
+                                        valor = col1;
                                     });	
                                     $("#ocultar").on('click',function(){    
                                         $("#enviarMensaje").hide();
                                         $("#privado").on( "click", function() {
-			                                var studentdata = { mensaje: $("#mensaje").val(), tipo: 2};                                           v
+			                                var studentdata = { idusu:valor, mensaje: $("#mensaje").val(), tipo: 2};                                           v
 			                                $.ajax({  
       			                                url: "/mensajePrivado",  
       			                                dataType: 'json',  
