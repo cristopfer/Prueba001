@@ -67,7 +67,23 @@
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-3">Area de enseñanza: </div>
-                        <div class="col-md-7"><input class="form-control" type="text" id="curso"></div>
+                        <div class="col-md-7">
+                            <input class="form-control" type="text" id="curso">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Seleccionar curso</option>
+                                <option value="Aritmetica">Aritmetica</option>
+                                <option value="Algebra">Algebra</option>
+                                <option value="Base de datos">Base de datos</option>
+                                <option value="Biologia">Biologia</option>
+                                <option value="Calculo">Calculo</option>
+                                <option value="Desarrollo Web">Desarrollo Web</option>
+                                <option value="Fisica">Fisica</option>
+                                <option value="Historia">Historia</option>
+                                <option value="Lenguaje">Lenguaje</option>
+                                <option value="Tesis">Tesis</option>
+                                <option value="Quimica">Quimica</option>
+                            </select>
+                        </div>
                         <div class="col-md-1"></div>
                     </div><br>
                     <div class="row">
@@ -149,6 +165,7 @@
             $("#editar2").on( "click", function() {
 			    $("#curso").prop( "disabled", false );
                 $("#descripcionProfesor").prop( "disabled", false );
+                alert($('select').val());
             });
             $("#actualizar2").on( "click", function() {
                 var studentdata = { curso: $("#curso").val(), descripcion: $("#descripcionProfesor").val()};
