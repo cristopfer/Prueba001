@@ -91,7 +91,7 @@ app.post("/pagarServicio",function(req,res){
     PagoModel.PagarProfesor(idusu,idpro,req.body.tarjeta,req.body.correo,res);
 });
 app.post("/verMensajesPrivados",function(req,res){ 
-    MensajeModel.ConsultarMensajePrivado(idpro,res);
+    MensajeModel.ConsultarMensajePrivado(idproLogueado,res);
 });
 
 app.listen(port, host ,function(){   
