@@ -105,27 +105,7 @@
             <div class="col-md-8" id='resultado'></div> 
             <div class="col-md-2"></div> 
         </div>
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Mensaje Privado</h4>
-                    </div>
-                    <div class="modal-body">                       
-                        <input class="form-control" type="text" id="mensaje" placeholder="Envie un mensaje privado">
-                    </div>
-                    <div class="modal-footer">
-                        <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-3"><button type="button" class="btn btn-success" id="privado">Enviar</button></div>
-                            <div class="col-md-3"><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></div>
-                            <div class="col-md-4"></div>
-                        </div>                                  
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <footer>
             <div id="contenedor-frase-final"><p>La mejor inversión esta en ti</p></div>
             <div id="linea-final">
@@ -170,8 +150,11 @@
       			                type: 'POST',  
       			                success: function(data) {                                                                            
                                     for(var i = 0; i < data.length; i++)
-                                        consulta +='<div class="alert alert-info" align="center">'+data[i].nomusu+': '+data[i].descrip+' fecha:'+data[i].fec+' <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Enviar mensaje</button></div>';                                                                                           
-                                    $("#resultado").append(consulta);		
+                                        consulta +='<div class="alert alert-info" align="center">'+data[i].nomusu+': '+data[i].descrip+' fecha:'+data[i].fec+' <button class="btn btn-info" id="ver">Enviar mensaje</button></div>';                                                                                           
+                                    $("#resultado").append(consulta);	
+                                    $("#ver").on('click',function(){    
+                                        alert('aqui');
+                                    });		
       			                }
     		                });
       			        }
