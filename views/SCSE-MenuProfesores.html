@@ -147,8 +147,10 @@
       			                dataType: 'json',  
       			                type: 'POST',  
       			                success: function(data) {                                         
-                                    for(var i = 0; i < data.length; i++)
-                                        consulta +='<div class="alert alert-info">'+data[i].nom+': '+data[i].descrip+' '+data[i].fec+'</div>';                       
+                                    for(var i = 0; i < data.length; i++){
+                                        consulta +='<div class="alert alert-info">'+data[i].nomusu+': '+data[i].descrip+' '+data[i].fec+'</div>';                       
+                                        alert(data[i].nomusu);
+                                    }
                                     $("#resultado").append(consulta);		
       			                }
     		                });

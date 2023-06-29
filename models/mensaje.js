@@ -36,7 +36,6 @@ function ConsultarMensajePrivado(idProfesor,respuesta){
                 LogModel.ErrorLog("models/comentario.js", "consultar_mensaje_privado_profesor", err.message);
             }
             else{
-                console.log(data.rows[0]);
                 respuesta.send(data.rows);
             }              
         });
