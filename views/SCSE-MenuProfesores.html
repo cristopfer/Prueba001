@@ -100,6 +100,14 @@
             </div> 
             <div class="col-md-2"></div> 
         </div><br>
+        </div><br>
+        <div class="row">
+            <div class="col-md-2"></div> 
+            <div class="col-md-8" id='enviarMensaje'>
+                <input class="form-control" type="text" id="mensaje" placeholder="Envie un mensaje privado">
+            </div> 
+            <div class="col-md-2"></div> 
+        </div>
         <div class="row">
             <div class="col-md-2"></div> 
             <div class="col-md-8" id='resultado'></div> 
@@ -120,6 +128,7 @@
         </footer>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
         <script type="text/javascript">
+            $("#enviarMensaje").hide();
             $("#nombreProfesor").prop( "disabled", true );
             $("#apellidoProfesor").prop( "disabled", true );
             $("#correoProfesor").prop( "disabled", true );
@@ -150,10 +159,10 @@
       			                type: 'POST',  
       			                success: function(data) {                                                                            
                                     for(var i = 0; i < data.length; i++)
-                                        consulta +='<div class="alert alert-info" align="center">'+data[i].nomusu+': '+data[i].descrip+' fecha:'+data[i].fec+' <button class="btn btn-info" id="ver">Enviar mensaje</button></div>';                                                                                           
+                                        consulta +='<div class="alert alert-info" align="center"><div class="row"><div class="col-md-3">'+data[i].nomusu+': </div><div class="col-md-3">'+data[i].descrip+' </div><div class="col-md-3">fecha:'+data[i].fec+'</div><div class="col-md-2"><button class="btn btn-info" id="ver">Enviar mensaje</button></div><div class="col-md-1" hidden>'+data[i].idusu+'</div></div></div>';                                                                                           
                                     $("#resultado").append(consulta);	
                                     $("#ver").on('click',function(){    
-                                        alert('aqui');
+                                        $("#enviarMensaje").show();
                                     });		
       			                }
     		                });
