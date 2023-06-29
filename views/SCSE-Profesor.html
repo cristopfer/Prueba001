@@ -29,8 +29,13 @@
                 <img src="assets/images/profesor.png" width="180" height="180" alt="logo"><br>
                 <div class="row">
                     <div class="col-md-4">Calificacion: </div>
-                    <div class="col-md-4"><input class="form-control" type="text" id="puntuacion" placeholder="1-10"></div>
+                    <div class="col-md-4"><input class="form-control" type="text" id="puntuacion" placeholder="1-100"></div>
                     <div class="col-md-4"><button class="btn btn-success" id="calificar">Calificar</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">Personas que calificaron: </div>
+                    <div class="col-md-4"><p id="calificados"></p> </div>
+                    <div class="col-md-4"></div>
                 </div>
             </div>
             <div class="col-md-5">
@@ -145,7 +150,8 @@
                     $("#apellidoProfesor").text("Apellido: "+data[0].ape);	
                     $("#correoProfesor").text("Correo: "+data[0].cor);
                     $("#curso").text("Curso: "+data[0].curs);
-                    $("#descripcionProfesor").text("Descripcion: "+data[0].descrip);	
+                    $("#descripcionProfesor").text("Descripcion: "+data[0].descrip);
+                    $("#calificados").text(data[0].vistado);
       			}
     		});
             var consulta1 = "";

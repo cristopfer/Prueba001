@@ -91,7 +91,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';                        
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';                        
                         $("#resultado").append(consulta);	
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -121,7 +121,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';                        
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';                        
                         $("#resultado").append(consulta);	
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -151,7 +151,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
                         $("#resultado").append(consulta);	
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -181,7 +181,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
                         $("#resultado").append(consulta);
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -211,7 +211,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
                         $("#resultado").append(consulta);
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -241,7 +241,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
                         $("#resultado").append(consulta);
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -271,7 +271,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
                         $("#resultado").append(consulta);
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -301,7 +301,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
                         $("#resultado").append(consulta);
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -331,7 +331,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
                         $("#resultado").append(consulta);
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -361,7 +361,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
                         $("#resultado").append(consulta);
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -391,7 +391,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
                         $("#resultado").append(consulta);
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
@@ -421,7 +421,7 @@
       			    data: studentdata,  
       			    success: function(data) {                        
                         for(var i = 0; i < data.length; i++)
-                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Vistados:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
+                            consulta +='<div class="alert alert-success"><div class="row"><div class="col-md-2"><img src="assets/images/compas.png" width="60" height="60" alt="logo"> </div><div class="col-md-6"><p>Nombre del profesor:'+data[i].nom+' '+data[i].ape+'</p><p>Curso:'+data[i].curs+'</p><p>Descripcion:'+data[i].descrip+'</p><p>Calificacion:'+data[i].cali+'</p><p>Personas que calificaron:'+data[i].vistas+'</p></div><div class="col-md-1" hidden>'+data[i].idpro+'</div><div class="col-md-3"><p>Precio:'+data[i].prec+'</p><p><button class="btn btn-info" id="ver">Apuntarse al curso</button></p></div></div></div>';
                         $("#resultado").append(consulta);
                         $("button").on('click',function(){    
                             var currentRow=$(this).closest("div.row");
