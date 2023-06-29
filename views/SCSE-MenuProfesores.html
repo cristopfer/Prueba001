@@ -172,9 +172,7 @@
                                     });	
                                     $("#ocultar").on('click',function(){    
                                         $("#enviarMensaje").hide();
-                                        alert("aqui");
-                                        $("#privado").on( "click", function() {
-			                                var studentdata = { idusu:valor, mensaje: $("#mensaje").val(), tipo: 2};                                           v
+                                        var studentdata = { idusu:valor, mensaje: $("#mensaje").val(), tipo: 2};                                           v
 			                                $.ajax({  
       			                                url: "/mensajePrivado",  
       			                                dataType: 'json',  
@@ -183,8 +181,7 @@
       			                                success: function(data) { 
       				                                alert("Se envio el mensaje privado al profesor");                       		
       			                                }
-    		                                });
-                                        });
+    		                            });
                                     });	
       			                }
     		                });
