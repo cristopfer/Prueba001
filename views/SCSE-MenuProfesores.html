@@ -141,6 +141,17 @@
                             $("#correoProfesor").val(data[0].cor);
                             $('select').val(data[0].curs);
                             $("#descripcionProfesor").val(data[0].descrip);	
+                            $("#resultado").empty();
+			                $.ajax({             
+      			                url: "/verMensajesPrivados",  
+      			                dataType: 'json',  
+      			                type: 'POST',  
+      			                success: function(data) {                                         
+                                    for(var i = 0; i < data.length; i++)
+                                        consulta +='<div class="alert alert-info">'+data[i].nom+': '+data[i].descrip+' '+data[i].fec+'</div>';                       
+                                        $("#resultado").append(consulta);		
+      			                }
+    		                });
       			        }
     		        });	
       			}
@@ -182,18 +193,7 @@
     		    });
 			    $('select').prop( "disabled", true );
                 $("#descripcionProfesor").prop( "disabled", true );
-            });
-            $("#resultado").empty();
-			$.ajax({             
-      			url: "/verMensajesPrivados",  
-      			dataType: 'json',  
-      			type: 'POST',  
-      			success: function(data) {                                         
-                    for(var i = 0; i < data.length; i++)
-                        consulta +='<div class="alert alert-info">'+data[i].nom+': '+data[i].descrip+' '+data[i].fec+'</div>';                       
-                    $("#resultado").append(consulta);		
-      			}
-    		});
+            });           
         </script>
     </body>
 </html>
