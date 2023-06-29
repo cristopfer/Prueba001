@@ -94,6 +94,9 @@ app.post("/verMensajesPrivados",function(req,res){
     console.log(idproLogueado);
     MensajeModel.ConsultarMensajePrivado(idproLogueado,res);
 });
+app.post("/mensajePrivado",function(req,res){ 
+    MensajeModel.IngresarMensaje(idusu,idpro,req.body.mensaje,req.body.tipo,res);
+});
 
 app.listen(port, host ,function(){   
     console.log("server start on port"+ port);  

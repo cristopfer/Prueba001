@@ -159,13 +159,32 @@
       			                url: "/verMensajesPrivados",  
       			                dataType: 'json',  
       			                type: 'POST',  
-      			                success: function(data) {                                                                            
+      			                success: function(data) {
+                                    var valor;                                                                            
                                     for(var i = 0; i < data.length; i++)
                                         consulta +='<div class="alert alert-info" align="center"><div class="row"><div class="col-md-3">'+data[i].nomusu+': </div><div class="col-md-3">'+data[i].descrip+' </div><div class="col-md-3">fecha:'+data[i].fec+'</div><div class="col-md-2"><button class="btn btn-info" id="ver">Enviar mensaje</button></div><div class="col-md-1" hidden>'+data[i].idusu+'</div></div></div>';                                                                                           
                                     $("#resultado").append(consulta);	
                                     $("#ver").on('click',function(){    
                                         $("#enviarMensaje").show();
-                                    });		
+                                        var currentRow=$(this).closest("div.row");
+                                        var col1=currentRow.find("div:eq(4)").html();
+                                        alert(col1);
+                                    });	
+                                    $("#ocultar").on('click',function(){    
+                                        $("#enviarMensaje").hide();
+                                        $("#privado").on( "click", function() {
+			                                var studentdata = { mensaje: $("#mensaje").val(), tipo: 2};                                           v
+			                                $.ajax({  
+      			                                url: "/mensajePrivado",  
+      			                                dataType: 'json',  
+      			                                type: 'POST',  
+      			                                data: studentdata,  
+      			                                success: function(data) { 
+      				                                alert("Se envio el mensaje privado al profesor");                       		
+      			                                }
+    		                                });
+                                        });
+                                    });	
       			                }
     		                });
       			        }
