@@ -106,7 +106,7 @@
             <div class="col-md-4" >
                 <input class="form-control" type="text" id="mensaje" placeholder="Envie un mensaje privado">
             </div> 
-            <div class="col-md-2"><button class="btn btn-info" id="ocultar">Enviar</button></div> 
+            <div class="col-md-2"><button class="btn btn-info" id="enviarMen">Enviar</button></div> 
             <div class="col-md-2"></div> 
             <div class="col-md-2"></div>
         </div>
@@ -214,8 +214,8 @@
 			    $('select').prop( "disabled", true );
                 $("#descripcionProfesor").prop( "disabled", true );
             });
-            $("#ocultar").on('click',function(){                   
-                var studentdata = { idusu: valor, mensaje: $("#mensaje").val(), tipo: 2};                                 v
+            $("#enviarMen").on('click',function(){                   
+                var studentdata = { idusu: valor, mensaje: $("#mensaje").val(), tipo: 2};                                 
 			    $.ajax({  
       			    url: "/mensajePrivadoProfesor",  
       			    dataType: 'json',  
