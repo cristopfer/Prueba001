@@ -90,6 +90,9 @@ app.post("/listadoMensajesProfesor",function(req,res){
 app.post("/pagarServicio",function(req,res){ 
     PagoModel.PagarProfesor(idusu,idpro,req.body.tarjeta,req.body.correo,res);
 });
+app.post("/verMensajesPrivados",function(req,res){ 
+    MensajeModel.ConsultarMensajePrivado(idpro,res);
+});
 
 app.listen(port, host ,function(){   
     console.log("server start on port"+ port);  

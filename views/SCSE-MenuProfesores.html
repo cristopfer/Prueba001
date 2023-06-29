@@ -99,6 +99,11 @@
                 </div>
             </div> 
             <div class="col-md-2"></div> 
+        </div><br>
+        <div class="row">
+            <div class="col-md-2"></div> 
+            <div class="col-md-8" id='resultado'></div> 
+            <div class="col-md-2"></div> 
         </div>
         <footer>
             <div id="contenedor-frase-final"><p>La mejor inversión esta en ti</p></div>
@@ -178,6 +183,17 @@
 			    $('select').prop( "disabled", true );
                 $("#descripcionProfesor").prop( "disabled", true );
             });
+            $("#resultado").empty();
+			$.ajax({             
+      			url: "/verMensajesPrivados",  
+      			dataType: 'json',  
+      			type: 'POST',  
+      			success: function(data) {                                         
+                    for(var i = 0; i < data.length; i++)
+                        consulta +='<div class="alert alert-info">'+data[i].nom+': '+data[i].descrip+' '+data[i].fec+'</div>';                       
+                    $("#resultado").append(consulta);		
+      			}
+    		});
         </script>
     </body>
 </html>
