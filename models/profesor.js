@@ -37,6 +37,9 @@ function CalificarProfesor(idProfesor, puntos, respuesta){
             }
             else{
                 console.log(data);
+                console.log(data.rows);
+                console.log(data.rows[0]);
+                console.log(data.rows[0].calificar_profesor);
                 respuesta.send(data.rows);
             }              
         });

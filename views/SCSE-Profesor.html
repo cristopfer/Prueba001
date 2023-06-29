@@ -189,8 +189,7 @@
       			    type: 'POST',  
       			    data: studentdata,  
       			    success: function(data) { 
-                        alert(data)
-                        $("#calificados").text(data.calificar_profesor);
+                        $("#calificados").text(data[0].calificar_profesor);
       				    alert("Se califico al profesor");		
       			    }
     		    });
