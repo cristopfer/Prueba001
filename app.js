@@ -94,7 +94,7 @@ app.post("/verMensajesPrivados",function(req,res){
     console.log(idproLogueado);
     MensajeModel.ConsultarMensajePrivado(idproLogueado,res);
 });
-app.post("/mensajePrivado",function(req,res){
+app.post("/mensajePrivadoProfesor",function(req,res){
     MensajeModel.IngresarMensaje(req.body.idusu,idproLogueado,req.body.mensaje,req.body.tipo,res);
 });
 

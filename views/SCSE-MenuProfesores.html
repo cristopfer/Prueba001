@@ -216,14 +216,12 @@
             });
             $("#ocultar").on('click',function(){    
                 $("#enviarMensaje").hide();
-                var studentdata = { idusu: valor, mensaje: $("#mensaje").val(), tipo: 2}; 
-                alert($("#mensaje").val());  
-                alert(valor);                                        v
+                var studentdata = { idusu: valor, mensaje: $("#mensaje").val(), tipo: 2};                                 v
 			    $.ajax({  
-      			    url: "/mensajePrivado",  
+      			    url: "/mensajePrivadoProfesor",  
       			    dataType: 'json',  
       			    type: 'POST',  
-      			     data: studentdata,  
+      			    data: studentdata,  
       			    success: function(data) { 
       				    alert("Se envio el mensaje privado al profesor");                       		
       			    }
