@@ -68,9 +68,7 @@
                         <div class="col-md-1"></div>
                         <div class="col-md-3">Area de enseñanza: </div>
                         <div class="col-md-7">
-                            <input class="form-control" type="text" id="curso">
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar curso</option>
                                 <option value="Aritmetica">Aritmetica</option>
                                 <option value="Algebra">Algebra</option>
                                 <option value="Base de datos">Base de datos</option>
@@ -136,7 +134,7 @@
                             $("#nombreProfesor").val(data[0].nom);
                             $("#apellidoProfesor").val(data[0].ape);	
                             $("#correoProfesor").val(data[0].cor);
-                            $("#curso").val(data[0].curs);
+                            $('select').val(data[0].curs);
                             $("#descripcionProfesor").val(data[0].descrip);	
       			        }
     		        });	
@@ -165,10 +163,9 @@
             $("#editar2").on( "click", function() {
 			    $('select').prop( "disabled", false );
                 $("#descripcionProfesor").prop( "disabled", false );
-                alert($('select').val());
             });
             $("#actualizar2").on( "click", function() {
-                var studentdata = { curso: $("#curso").val(), descripcion: $("#descripcionProfesor").val()};
+                var studentdata = { curso: $('select').val(), descripcion: $("#descripcionProfesor").val()};
 			    $.ajax({  
       			    url: "/actualizarCurso",  
       			    dataType: 'json',  
@@ -178,7 +175,7 @@
       				    alert("Se actualizo los datos del curso");		
       			    }
     		    });
-			    $("#curso").prop( "disabled", true );
+			    $('select').prop( "disabled", true );
                 $("#descripcionProfesor").prop( "disabled", true );
             });
         </script>
