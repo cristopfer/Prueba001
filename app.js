@@ -63,6 +63,7 @@ app.post("/obtenerIdProfesor",function(req,res){
     res.send(JSON.stringify({ estado: 0 }));
 });
 app.post("/calificar",function(req,res){ 
+    console.log(idpro);
     ProfesorModel.CalificarProfesor(idpro,req.body.puntos,res);
 });
 app.post("/comentar",function(req,res){ 
