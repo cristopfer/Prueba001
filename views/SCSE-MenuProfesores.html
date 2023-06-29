@@ -119,7 +119,7 @@
             $("#nombreProfesor").prop( "disabled", true );
             $("#apellidoProfesor").prop( "disabled", true );
             $("#correoProfesor").prop( "disabled", true );
-            $("#curso").prop( "disabled", true );
+            $('select').prop( "disabled", true );
             $("#descripcionProfesor").prop( "disabled", true );
             $.ajax({  
       			url: "/usuarioLogueado",  
@@ -163,7 +163,7 @@
                 $("#correoProfesor").prop( "disabled", true );
             });
             $("#editar2").on( "click", function() {
-			    $("#curso").prop( "disabled", false );
+			    $('select').prop( "disabled", false );
                 $("#descripcionProfesor").prop( "disabled", false );
                 alert($('select').val());
             });
