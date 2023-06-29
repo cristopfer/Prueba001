@@ -12,6 +12,7 @@ var UsuarioModel = require("./models/usuario");
 var ProfesorModel = require("./models/profesor");
 var ComentarioModel = require("./models/comentario");
 var MensajeModel = require("./models/mensaje");
+var PagoModel = require("./models/pago");
 global.nombreusuario = "-";
 global.idpro = "-";
 global.idusu = '-';
@@ -85,6 +86,9 @@ app.post("/actualizarCurso",function(req,res){
 });
 app.post("/listadoMensajesProfesor",function(req,res){ 
     MensajeModel.ConsultarMensajeProfesor(idusu,idpro,res);
+});
+app.post("/pagarServicio",function(req,res){ 
+    PagoModel.PagarProfesor(idusu,idpro,req.body.tarjeta,req.body.correo,res);
 });
 
 app.listen(port, host ,function(){   

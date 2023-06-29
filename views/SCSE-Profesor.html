@@ -11,7 +11,7 @@
         <header> 
             <div id="cabecero">
                 <div id="Logo-titulo">
-                    <a id="Logo" href="/views/Buscador_2.html">
+                    <a id="Logo" href="">
                         <div id="contenedor_imagen" ><img src="assets/images/SeMaslogo_st .png"/></div>
                         <p class="separacion_elementos_cabecero">Sémás</p>
                     </a>
@@ -33,8 +33,8 @@
                     <div class="col-md-4"><button class="btn btn-success" id="calificar">Calificar</button></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-8">Personas que calificaron: </div><br>
-                    <div class="col-md-4"><p id="calificados"></p> </div>
+                    <div class="col-md-10">Personas que calificaron: </div><br>
+                    <div class="col-md-2"><p id="calificados"></p> </div>
                 </div>
             </div>
             <div class="col-md-5">
@@ -97,7 +97,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-6"></div>
-            <div class="col-md-2"><button class="btn btn-success" id="">Adquirir curso</button></div>
+            <div class="col-md-2"><button class="btn btn-success" id="pago">Adquirir curso</button></div>
             <div class="col-md-2"></div>
         </div><br>
         <div class="row">
@@ -246,6 +246,9 @@
     		            });		
       			    }
     		    });
+            });
+            $("#pago").on( "click", function() {
+			    location.href='SCSE-Pago.html';
             });
         </script> 
     </body>    
