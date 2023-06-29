@@ -10,6 +10,7 @@ function DatosUsuario(nomusu, respuesta){
             else{
                 idusu = data.rows[0].idusu;
                 idproLogueado = data.rows[0].idpro;
+                console.log(idproLogueado);
                 respuesta.send(data.rows);
             }              
         });
