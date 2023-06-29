@@ -36,6 +36,7 @@ function CalificarProfesor(idProfesor, puntos, respuesta){
                 LogModel.ErrorLog("models/profesor.js", "consultar_cursos", err.message);
             }
             else{
+                console.log(data);
                 respuesta.send(data.rows);
             }              
         });
