@@ -130,6 +130,7 @@
         </footer>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
         <script type="text/javascript">
+            var valor; 
             $("#enviarMensaje").hide();
             $("#nombreProfesor").prop( "disabled", true );
             $("#apellidoProfesor").prop( "disabled", true );
@@ -159,8 +160,7 @@
       			                url: "/verMensajesPrivados",  
       			                dataType: 'json',  
       			                type: 'POST',  
-      			                success: function(data) {
-                                    var valor;                                                                            
+      			                success: function(data) {                                                                                                              
                                     for(var i = 0; i < data.length; i++)
                                         consulta +='<div class="alert alert-info" align="center"><div class="row"><div class="col-md-3">'+data[i].nomusu+': </div><div class="col-md-3">'+data[i].descrip+' </div><div class="col-md-3">fecha:'+data[i].fec+'</div><div class="col-md-2"><button class="btn btn-info" id="ver">Enviar mensaje</button></div><div class="col-md-1" hidden>'+data[i].idusu+'</div></div></div>';                                                                                           
                                     $("#resultado").append(consulta);	
@@ -169,21 +169,7 @@
                                         var currentRow=$(this).closest("div.row");
                                         var col1=currentRow.find("div:eq(4)").html();
                                         valor = col1;
-                                    });	
-                                    $("#ocultar").on('click',function(){    
-                                        $("#enviarMensaje").hide();
-                                        var studentdata = { idusu: valor, mensaje: $("#mensaje").val(), tipo: 2}; 
-                                        alert(valor);                                          v
-			                            $.ajax({  
-      			                            url: "/mensajePrivado",  
-      			                            dataType: 'json',  
-      			                            type: 'POST',  
-      			                            data: studentdata,  
-      			                            success: function(data) { 
-      				                            alert("Se envio el mensaje privado al profesor");                       		
-      			                            }
-    		                            });
-                                    });	
+                                    });	                                   	
       			                }
     		                });
       			        }
@@ -227,6 +213,21 @@
     		    });
 			    $('select').prop( "disabled", true );
                 $("#descripcionProfesor").prop( "disabled", true );
+            });
+            $("#ocultar").on('click',function(){    
+                $("#enviarMensaje").hide();
+                var studentdata = { idusu: valor, mensaje: $("#mensaje").val(), tipo: 2}; 
+                alert($("#mensaje").val());  
+                alert(valor);                                        v
+			    $.ajax({  
+      			    url: "/mensajePrivado",  
+      			    dataType: 'json',  
+      			    type: 'POST',  
+      			     data: studentdata,  
+      			    success: function(data) { 
+      				    alert("Se envio el mensaje privado al profesor");                       		
+      			    }
+    		    });
             });           
         </script>
     </body>
